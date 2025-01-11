@@ -34,9 +34,9 @@ export const SidebarWrapper = () => {
           collapsed: collapsed,
         })}
       >
-        <div className={Sidebar.Header()}>
+        {/* <div className={Sidebar.Header()}>
           <CompaniesDropdown />
-        </div>
+        </div> */}
         <div className="flex flex-col justify-between h-full">
           <div className={Sidebar.Body()}>
             <SidebarItem
@@ -45,31 +45,44 @@ export const SidebarWrapper = () => {
               isActive={pathname === "/"}
               href="/"
             />
+
             <SidebarMenu title="Main Menu">
               <SidebarItem
                 isActive={pathname === "/accounts"}
-                title="Accounts"
+                title="Users"
+                icon={<AccountsIcon />}
+                href="accounts"
+              />
+              <SidebarItem
+                isActive={pathname === "/accounts"}
+                title="Vendors"
+                icon={<AccountsIcon />}
+                href="accounts"
+              />
+              <SidebarItem
+                isActive={pathname === "/accounts"}
+                title="Products"
                 icon={<AccountsIcon />}
                 href="accounts"
               />
               <SidebarItem
                 isActive={pathname === "/payments"}
-                title="Payments"
+                title="Orders"
                 icon={<PaymentsIcon />}
               />
-              <CollapseItems
+              {/* <CollapseItems
                 icon={<BalanceIcon />}
                 items={["Banks Accounts", "Credit Cards", "Loans"]}
                 title="Balances"
-              />
+              /> */}
               <SidebarItem
                 isActive={pathname === "/customers"}
-                title="Customers"
+                title="Transactions"
                 icon={<CustomersIcon />}
               />
               <SidebarItem
                 isActive={pathname === "/products"}
-                title="Products"
+                title="Reports"
                 icon={<ProductsIcon />}
               />
               <SidebarItem
@@ -87,20 +100,20 @@ export const SidebarWrapper = () => {
               />
               <SidebarItem
                 isActive={pathname === "/view"}
-                title="View Test Data"
+                title="System Logs"
                 icon={<ViewIcon />}
               />
-              <SidebarItem
+              {/* <SidebarItem
                 isActive={pathname === "/settings"}
                 title="Settings"
-                icon={<SettingsIcon />}
-              />
+                icon={<SettingsIcon />} */}
+              {/* /> */}
             </SidebarMenu>
 
-            <SidebarMenu title="Updates">
+            <SidebarMenu title="Help">
               <SidebarItem
                 isActive={pathname === "/changelog"}
-                title="Changelog"
+                title="Documentation"
                 icon={<ChangeLogIcon />}
               />
             </SidebarMenu>
